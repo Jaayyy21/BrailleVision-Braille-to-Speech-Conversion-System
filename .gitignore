@@ -1,0 +1,18 @@
+# Model weights
+*.pt
+*.pth
+*.pkl
+
+# Dataset
+raw_dataset/
+braille_yolo_dataset/
+
+# Audio outputs
+*.mp3
+
+# Inference outputs
+inference_output/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+__pycache__/
