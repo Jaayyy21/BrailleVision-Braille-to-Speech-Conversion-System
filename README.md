@@ -1,34 +1,35 @@
 # BrailleVision 🔡🔊 — Braille to Speech Conversion System
 
-A real-time Braille recognition and text-to-speech system built using deep learning. 
-Designed to improve accessibility for visually impaired users by converting Braille 
-characters into spoken audio across multiple languages.
+A real-time Braille recognition and text-to-speech system built using deep learning.
+Designed to improve accessibility for visually impaired users by converting Braille
+characters into spoken audio in English and Tamil.
 
 ## 🚀 Features
 - Real-time Braille character detection using YOLOv12 and Faster R-CNN
 - 98% classification accuracy on test data
-- Multilingual text-to-speech output
-- Trained on a custom dataset of 3,000+ annotated Braille samples
+- Multilingual speech output — English and Tamil (via gTTS)
+- Trained on a custom dataset of 3,000+ annotated Braille samples from Kaggle
 
 ## 🧠 Models Used
-- **YOLOv12** — for real-time object detection
-- **Faster R-CNN** — for high-accuracy classification
+- **YOLOv12** — real-time object detection
+- **Faster R-CNN** — high-accuracy Braille classification
 - Dataset sourced and preprocessed from Kaggle
 
 ## 🛠️ Tech Stack
 - Python
 - YOLOv12, Faster R-CNN
 - PyTorch
+- gTTS (Google Text-to-Speech)
+- Google Translate API
 - NumPy, Pandas
-- Text-to-Speech (TTS) library
 
 ## 📁 Project Structure
 ```
-├── Yolo.ipynb               # YOLOv12 training and inference
-├── Untitled.ipynb           # Faster R-CNN experiments  
-├── braille_data.yaml        # Dataset configuration
-├── training_runs/           # Training results and metrics
-├── test_images/             # Sample test images
+├── Yolo.ipynb                  # YOLOv12 training, inference & TTS pipeline
+├── Untitled.ipynb              # Faster R-CNN experiments
+├── braille_data.yaml           # Dataset configuration
+├── training_runs/              # Training results and metrics
+├── test_images/                # Sample test images
 ```
 
 ## 📊 Results
@@ -44,13 +45,14 @@ git clone https://github.com/Jaayyy21/BrailleVision-Braille-to-Speech-Conversion
 ```
 2. Install dependencies
 ```bash
-pip install ultralytics torch torchvision gtts
+pip install ultralytics torch torchvision gtts googletrans==4.0.0rc1
 ```
 3. Open `Yolo.ipynb` in Jupyter and run the cells
+> ⚠️ Requires an active internet connection for Google Translate and gTTS
 
 ## 👥 Team
-Built by a team of 3 as part of final year project at VIT Chennai (2025)
+Built by a team of 3 as part of a project at VIT Chennai (2025)
 
 ## 📌 Note
-Model weights are not included in this repo due to file size. 
-Dataset available on Kaggle — contact for details.
+Model weights and dataset are not included due to file size.
+Dataset available on Kaggle — contact for access.
